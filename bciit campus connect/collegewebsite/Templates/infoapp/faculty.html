@@ -1,0 +1,33 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'infoapp/css/faculty.css' %}">
+    <title>Faculty Information</title>
+</head>
+<body>
+    <h1>Faculty Information</h1>
+    <div class="conatiner">
+   <center> <table border="1">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Department</th>
+                <th>Email</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for faculty in faculties %}
+            <tr>
+                <td>{{ faculty.name }}</td>
+                <td>{{ faculty.department }}</td>
+                <td>{{ faculty.email }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table></center>
+    </div>
+</body>
+</html>
